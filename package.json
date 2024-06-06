@@ -2,6 +2,7 @@
   "name": "create-answer-plugin",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "index.js",
   "bin": {
     "create-answer-plugin": "bin/index.js"
@@ -12,6 +13,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "humps": "^2.0.1",
+    "ora": "^8.0.1",
     "prompts": "^2.4.2",
     "yargs": "^17.7.2"
   }
