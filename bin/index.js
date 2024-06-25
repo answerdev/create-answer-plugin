@@ -7,10 +7,23 @@ import humps from 'humps'
 import { exec } from 'child_process'
 import ora from 'ora'
 import { URL } from 'node:url';
+import yargs from 'yargs'
+import { hideBin } from 'yargs/helpers'
 
 const __dirname = path.dirname(new URL(import.meta.url).pathname)
 
 const args = process.argv.slice(2)
+
+yargs(hideBin(process.argv))
+  .command('[pluginName]', 'create a plugin', (yargs) => {
+    yargs.positional('pluginName', {
+      type: 'string',
+      default: '',
+      describe: 'plugin name',
+    })
+  })
+  .help()
+  .alias('help', 'h').argv
 
 const selectPluginType = [
   {
