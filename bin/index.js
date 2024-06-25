@@ -114,6 +114,11 @@ const installNpm = async () => {
 
 ;(async () => {
   const { pluginType, pluginName } = await prompts(selectPluginType)
+
+  if (!pluginType || !pluginName) {
+    return
+  }
+  
   const result = await createPluginDir(pluginName)
   createI18n({
     ...result,
