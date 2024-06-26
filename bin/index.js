@@ -47,7 +47,7 @@ const selectPluginType = [
     message: 'What type of plugin do you want to create?',
     choices: [
       { title: 'Backend Plugin', value: 'backend' },
-      { title: 'Standard Plugin', value: 'standard' },
+      { title: 'Standard UI Plugin', value: 'standard' },
     ],
   },
 ]
