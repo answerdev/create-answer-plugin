@@ -24,7 +24,7 @@ const Component = () => {
     keyPrefix: '{{plugin_slug_name}}.frontend',
   });
 
-  return <div className="toolbar-item-wrap">Hello Answer!</div>;
+  return <div>Hello Answer!</div>;
 };
 
 export default Component;
