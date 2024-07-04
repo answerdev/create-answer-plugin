@@ -6,11 +6,11 @@ import fs from 'fs'
 import humps from 'humps'
 import { exec } from 'child_process'
 import ora from 'ora'
-import { URL } from 'node:url';
+import { URL, fileURLToPath } from 'node:url';
 import yargs from 'yargs'
 import { hideBin } from 'yargs/helpers'
 
-const __dirname = path.dirname(new URL(import.meta.url).pathname)
+const __dirname = path.dirname(fileURLToPath(new URL(import.meta.url)))
 
 const args = process.argv.slice(2)
 
