@@ -111,6 +111,14 @@ const createI18n = async ({ pluginSlugName, targetPath, pluginType }) => {
   })
 }
 
+const createInfoYaml = async ({ pluginSlugName, targetPath }) => {
+  const infoYamlTemplate = path.resolve(__dirname, '../template/ui/info.yaml')
+  const content = fs.readFileSync(infoYamlTemplate, 'utf-8')
+  const result = content.replace(/{{plugin_slug_name}}/g, pluginSlugName)
+
+  fs.writeFileSync(path.resolve(targetPath, 'info.yaml'), result)
+}
+
 const createReadme = async ({ pluginName, targetPath }) => {
   const name = humps.pascalize(pluginName)
   const content = `# ${name} Plugin`
@@ -148,6 +156,7 @@ const installNpm = async () => {
   await createBackendPlugin(result)
   await installGoMod(result)
 
+  await createInfoYaml(result)
   await createReadme(result)
 })()
 

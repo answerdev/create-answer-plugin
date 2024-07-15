@@ -19,10 +19,12 @@
 
 import Component from './Component';
 import i18nConfig from './i18n';
+import info from './info.yaml';
 
 export default {
   info: {
-    slug_name: '{{plugin_slug_name}}',
+    slug_name: info.slug_name,
+    type: info.type,
   },
   component: Component,
   i18nConfig,
