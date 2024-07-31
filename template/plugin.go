@@ -1,9 +1,14 @@
 package answer
 import (
+  "embed"
   "github.com/apache/incubator-answer/plugin"
 
   "github.com/apache/incubator-answer-plugins/util"
 )
+
+//go:embed  info.yaml
+var Info embed.FS
+
 type {{plugin_display_name}} struct {
 }
 func init() {
@@ -11,7 +16,7 @@ func init() {
 }
 func ({{plugin_display_name}}) Info() plugin.Info {
   info := &util.Info{}
-	info.GetInfo()
+	info.GetInfo(Info)
 
   return plugin.Info{
     Name:        plugin.MakeTranslator("{{plugin_display_name}}"),
