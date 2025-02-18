@@ -126,7 +126,7 @@ const createReadme = async ({ pluginName, targetPath }) => {
 }
 const installGoMod = async ({ packageName }) => {
   process.chdir(path.resolve(process.cwd(), packageName))
-  await exec(`go mod init github.com/apache/incubator-answer-plugins/${packageName} && go mod tidy`)
+  await exec(`go mod init github.com/apache/answer-plugins/${packageName} && go mod tidy`)
 }
 
 const installNpm = async () => {

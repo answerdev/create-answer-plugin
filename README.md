@@ -1,6 +1,6 @@
 # Create Answer Plugin
 
-This tool is used to create a new plugin for the [Answer](https://github.com/apache/incubator-answer) project.
+This tool is used to create a new plugin for the [Answer](https://github.com/apache/answer) project.
 
 ## Usage
 

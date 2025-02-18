@@ -1,9 +1,9 @@
 package answer
 import (
   "embed"
-  "github.com/apache/incubator-answer/plugin"
+  "github.com/apache/answer/plugin"
 
-  "github.com/apache/incubator-answer-plugins/util"
+  "github.com/apache/answer-plugins/util"
 )
 
 //go:embed  info.yaml
