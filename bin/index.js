@@ -15,6 +15,7 @@ const __dirname = path.dirname(fileURLToPath(new URL(import.meta.url)))
 const args = process.argv.slice(2)
 
 yargs(hideBin(process.argv))
+  .version(JSON.parse(fs.readFileSync(path.resolve(__dirname, '../package.json'), 'utf8')).version)
   .command('[pluginName]', 'create a plugin', (yargs) => {
     yargs.positional('pluginName', {
       type: 'string',
