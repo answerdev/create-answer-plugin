@@ -338,7 +338,7 @@ const uninstallPluginsCommand = async (
 // Setup yargs commands
 yargs(hideBin(process.argv))
   .version(packageJson.version)
-  .scriptName("create-answer-plugin")
+  .scriptName("answer-plugin")
   .usage("$0 <command> [options]")
 
   // Create command (default)
@@ -383,8 +383,9 @@ yargs(hideBin(process.argv))
     "Install plugins (defaults to all not installed plugins)",
     (yargs) => {
       yargs.positional("plugins", {
-        type: "array",
+        type: "string",
         describe: "Plugin names to install",
+        array: true,
         default: [],
       });
       yargs.option("path", {
@@ -407,8 +408,9 @@ yargs(hideBin(process.argv))
     "Uninstall plugins (defaults to all installed plugins)",
     (yargs) => {
       yargs.positional("plugins", {
-        type: "array",
+        type: "string",
         describe: "Plugin names to uninstall",
+        array: true,
         default: [],
       });
       yargs.option("path", {

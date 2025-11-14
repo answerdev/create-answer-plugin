@@ -249,7 +249,7 @@ This is a ${
 
 \`\`\`bash
 # Install the plugin
-create-answer-plugin install ${context.packageName}
+answer-plugin install ${context.packageName}
 \`\`\`
 
 ## Development

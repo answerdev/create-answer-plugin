@@ -5,7 +5,7 @@
   "type": "module",
   "main": "index.js",
   "bin": {
-    "create-answer-plugin": "bin/index.js"
+    "answer-plugin": "bin/index.js"
   },
   "scripts": {
     "build": "tsc",
