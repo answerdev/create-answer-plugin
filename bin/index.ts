@@ -336,9 +336,14 @@ const uninstallPluginsCommand = async (
 };
 
 // Setup yargs commands
+// Detect command name from process.argv[1] to support both aliases
+const commandName = process.argv[1]?.includes('create-answer-plugin') 
+  ? 'create-answer-plugin' 
+  : 'answer-plugin';
+
 yargs(hideBin(process.argv))
   .version(packageJson.version)
-  .scriptName("answer-plugin")
+  .scriptName(commandName)
   .usage("$0 <command> [options]")
 
   // Create command (default)

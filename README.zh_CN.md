@@ -18,14 +18,18 @@
 ### 全局安装
 
 ```bash
-npm install -g answer-plugin
+npm install -g create-answer-plugin
 # 或
-pnpm add -g answer-plugin
+pnpm add -g create-answer-plugin
 ```
+
+**注意**：包名是 `create-answer-plugin`，但命令是 `answer-plugin`。你也可以使用 `create-answer-plugin` 作为别名。
 
 ### 使用 npx（推荐）
 
 ```bash
+# 两种命令都可以使用：
+npx create-answer-plugin <command>
 npx answer-plugin <command>
 ```
 

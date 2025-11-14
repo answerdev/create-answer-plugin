@@ -18,14 +18,18 @@ A powerful CLI tool for creating and managing plugins for the [Apache Answer](ht
 ### Global Installation
 
 ```bash
-npm install -g answer-plugin
+npm install -g create-answer-plugin
 # or
-pnpm add -g answer-plugin
+pnpm add -g create-answer-plugin
 ```
+
+**Note**: The package name is `create-answer-plugin`, but the command is `answer-plugin`. You can also use `create-answer-plugin` as an alias.
 
 ### Usage with npx (Recommended)
 
 ```bash
+# Both commands work:
+npx create-answer-plugin <command>
 npx answer-plugin <command>
 ```
 
