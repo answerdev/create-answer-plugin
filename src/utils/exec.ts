@@ -42,7 +42,11 @@ export const executeCommand = async (
         timeoutPromise,
       ]);
 
-      return result.stdout.trim();
+      // Ensure stdout is a string
+      const stdout = typeof result.stdout === 'string' 
+        ? result.stdout 
+        : result.stdout.toString('utf-8');
+      return stdout.trim();
     } catch (error: any) {
       lastError = error;
 
