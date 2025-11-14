@@ -16,6 +16,10 @@
 # under the License.
 
 plugin:
-  {{plugin_slug_name}}:
+  {{info_slug_name}}:
     backend:
-    frontend:
+      info:
+        name:
+          other: {{plugin_display_name}}
+        description:
+          other: Hello World {{plugin_display_name}} Plugin

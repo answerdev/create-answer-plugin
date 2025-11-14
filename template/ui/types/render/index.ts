@@ -17,9 +17,16 @@
  * under the License.
  */
 
-package i18n
+import Component from './Component';
+import i18nConfig from './i18n';
+import info from './info.yaml';
 
-const (
-	InfoName        = "plugin.{{info_slug_name}}.backend.info.name"
-	InfoDescription = "plugin.{{info_slug_name}}.backend.info.description"
-)
+export default {
+  info: {
+    type: info.type,
+    slug_name: info.slug_name,
+  },
+  component: Component,
+  i18nConfig,
+};
+

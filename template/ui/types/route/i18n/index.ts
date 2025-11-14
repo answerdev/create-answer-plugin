@@ -17,9 +17,11 @@
  * under the License.
  */
 
-package i18n
+import en_US from './en_US.yaml';
+import zh_CN from './zh_CN.yaml';
 
-const (
-	InfoName        = "plugin.{{info_slug_name}}.backend.info.name"
-	InfoDescription = "plugin.{{info_slug_name}}.backend.info.description"
-)
+export default {
+  en_US,
+  zh_CN,
+};
+

@@ -17,9 +17,22 @@
  * under the License.
  */
 
-package i18n
+import { FC } from 'react';
+import { useTranslation } from 'react-i18next';
 
-const (
-	InfoName        = "plugin.{{info_slug_name}}.backend.info.name"
-	InfoDescription = "plugin.{{info_slug_name}}.backend.info.description"
-)
+const Component: FC = () => {
+  const { t } = useTranslation('plugin', {
+    keyPrefix: '{{plugin_slug_name}}.frontend',
+  });
+
+  return (
+    <div>
+      <h2>{t('hello_world')}</h2>
+      <p>This is a Hello World Captcha Plugin!</p>
+      <p>Implement your captcha logic here.</p>
+    </div>
+  );
+};
+
+export default Component;
+

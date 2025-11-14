@@ -15,11 +15,9 @@
 # specific language governing permissions and limitations
 # under the License.
 
-plugin:
-  {{info_slug_name}}:
-    backend:
-      info:
-        name:
-          other: {{plugin_display_name}}
-        description:
-          other: Hello World {{plugin_display_name}} 插件
+slug_name: {{info_slug_name}}
+type: {{plugin_type}}
+version: 0.0.1
+author: ""
+link: ""
+

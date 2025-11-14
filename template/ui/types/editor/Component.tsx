@@ -17,9 +17,30 @@
  * under the License.
  */
 
-package i18n
+import { FC } from 'react';
+import { Button } from 'react-bootstrap';
+import { useTranslation } from 'react-i18next';
 
-const (
-	InfoName        = "plugin.{{info_slug_name}}.backend.info.name"
-	InfoDescription = "plugin.{{info_slug_name}}.backend.info.description"
-)
+export interface EditorProps {
+  editor;
+  previewElement: HTMLElement;
+}
+
+const Component: FC<EditorProps> = ({ editor, previewElement }) => {
+  const { t } = useTranslation('plugin', {
+    keyPrefix: '{{plugin_slug_name}}.frontend',
+  });
+
+  const handleClick = () => {
+    alert('Hello World from Editor Plugin!');
+  };
+
+  return (
+    <Button variant="outline-secondary" onClick={handleClick}>
+      {t('hello_world')}
+    </Button>
+  );
+};
+
+export default Component;
+

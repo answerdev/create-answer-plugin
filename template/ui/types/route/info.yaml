@@ -1,0 +1,7 @@
+slug_name: {{info_slug_name}}
+type: route
+route: {{route_path}}
+version: 0.0.1
+author: ""
+link: ""
+

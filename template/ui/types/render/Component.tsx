@@ -17,9 +17,26 @@
  * under the License.
  */
 
-package i18n
+import { FC } from 'react';
+import { useTranslation } from 'react-i18next';
 
-const (
-	InfoName        = "plugin.{{info_slug_name}}.backend.info.name"
-	InfoDescription = "plugin.{{info_slug_name}}.backend.info.description"
-)
+export interface RenderProps {
+  content: string;
+}
+
+const Component: FC<RenderProps> = ({ content }) => {
+  const { t } = useTranslation('plugin', {
+    keyPrefix: '{{plugin_slug_name}}.frontend',
+  });
+
+  return (
+    <div>
+      <h2>{t('hello_world')}</h2>
+      <p>This is a Hello World Render Plugin!</p>
+      <div dangerouslySetInnerHTML={{ __html: content || 'Hello World Content' }} />
+    </div>
+  );
+};
+
+export default Component;
+

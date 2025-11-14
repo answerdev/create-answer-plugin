@@ -8,16 +8,29 @@
     "create-answer-plugin": "bin/index.js"
   },
   "scripts": {
+    "build": "tsc",
+    "dev": "tsx bin/index.ts",
+    "test": "tsx bin/index.ts",
+    "verify": "tsx scripts/verify-plugin.ts",
+    "verify:all": "tsx scripts/verify-all-plugins.ts",
+    "create:all": "tsx scripts/create-all-plugin-types.ts",
     "release": "release-it"
   },
   "dependencies": {
     "humps": "^2.0.1",
+    "js-yaml": "^4.1.0",
     "ora": "^8.0.1",
     "prompts": "^2.4.2",
+    "tsx": "^4.7.0",
     "yargs": "^17.7.2"
   },
   "devDependencies": {
-    "release-it": "^17.4.0"
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^20.0.0",
+    "@types/prompts": "^2.4.9",
+    "@types/yargs": "^17.0.34",
+    "release-it": "^17.4.0",
+    "typescript": "^5.3.3"
   },
   "author": "robin",
   "license": "MIT",

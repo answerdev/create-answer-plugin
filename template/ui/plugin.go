@@ -17,9 +17,36 @@
  * under the License.
  */
 
-package i18n
+package {{package_name}}
 
-const (
-	InfoName        = "plugin.{{info_slug_name}}.backend.info.name"
-	InfoDescription = "plugin.{{info_slug_name}}.backend.info.description"
+import (
+	"embed"
+	"github.com/apache/answer-plugins/{{plugin_name}}/i18n"
+	"github.com/apache/answer-plugins/util"
+	"github.com/apache/answer/plugin"
 )
+
+//go:embed info.yaml
+var Info embed.FS
+
+type {{plugin_display_name}}Plugin struct {
+}
+
+func init() {
+	plugin.Register(&{{plugin_display_name}}Plugin{})
+}
+
+func (d {{plugin_display_name}}Plugin) Info() plugin.Info {
+	info := &util.Info{}
+	info.GetInfo(Info)
+
+	return plugin.Info{
+		Name:        plugin.MakeTranslator(i18n.InfoName),
+		SlugName:    info.SlugName,
+		Description: plugin.MakeTranslator(i18n.InfoDescription),
+		Author:      info.Author,
+		Version:     info.Version,
+		Link:        info.Link,
+	}
+}
+

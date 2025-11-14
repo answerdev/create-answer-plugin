@@ -20,6 +20,9 @@ plugin:
     backend:
       info:
         name:
-          other: {{plugin_display_name}}
+          other: {{plugin_display_name}} Render
         description:
-          other: Hello World {{plugin_display_name}} 插件
+          other: Hello World Render Plugin
+    frontend:
+      hello_world: Hello World
+

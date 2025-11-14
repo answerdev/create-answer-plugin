@@ -20,6 +20,9 @@ plugin:
     backend:
       info:
         name:
-          other: {{plugin_display_name}}
+          other: {{plugin_display_name}} 验证码
         description:
-          other: Hello World {{plugin_display_name}} 插件
+          other: Hello World 验证码插件
+    frontend:
+      hello_world: 你好世界
+

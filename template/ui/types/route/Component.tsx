@@ -17,9 +17,22 @@
  * under the License.
  */
 
-package i18n
+import { FC } from 'react';
+import { useTranslation } from 'react-i18next';
 
-const (
-	InfoName        = "plugin.{{info_slug_name}}.backend.info.name"
-	InfoDescription = "plugin.{{info_slug_name}}.backend.info.description"
-)
+const Component: FC = () => {
+  const { t } = useTranslation('plugin', {
+    keyPrefix: '{{plugin_slug_name}}.frontend',
+  });
+
+  return (
+    <div>
+      <h1>{t('hello_world')}</h1>
+      <p>Route: {{route_path}}</p>
+      <p>This is a Hello World Route Plugin!</p>
+    </div>
+  );
+};
+
+export default Component;
+

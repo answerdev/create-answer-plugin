@@ -17,9 +17,15 @@
  * under the License.
  */
 
-package i18n
+import Component from './Component';
+import i18nConfig from './i18n';
 
-const (
-	InfoName        = "plugin.{{info_slug_name}}.backend.info.name"
-	InfoDescription = "plugin.{{info_slug_name}}.backend.info.description"
-)
+export default {
+  info: {
+    type: 'captcha',
+    slug_name: '{{info_slug_name}}',
+  },
+  component: Component,
+  i18nConfig,
+};
+
